@@ -22,7 +22,7 @@ const AIJoke = () => {
 
     return (
         <div>
-            <h1>AI Joke Response</h1>
+            <h1 className='header-title'>AI Joke Response</h1>
             <div>{joke}</div>
         </div>
     );
