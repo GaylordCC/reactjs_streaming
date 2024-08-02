@@ -1,25 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-const AIJoke = () => {
+const ChatCompletion = () => {
     const [joke, setJoke] = useState('');
 
     useEffect(() => {
-        
-        function getEventSource(endpoint) {
-            switch (endpoint) {
-                case 'main':
-                    return new EventSource('http://localhost:8000/main-streaming-endpoint');
-                case 'chatopenai':
-                    return new EventSource('http://localhost:8000/chatopenai-streaming-endpoint');
-                case 'azureopenai':
-                    return new EventSource('http://localhost:8000/azureopenai-streaming-endpoint');
-                default:
-                    throw new Error('Endpoint no válido');
-            }
-        }
-        
-        const endpoint = 'azureopenai';
-        const eventSource = getEventSource(endpoint);
+        const eventSource = new EventSource('http://localhost:8000/main-streaming-endpoint');
 
         eventSource.onmessage = function(event) {
             setJoke(prevJoke => prevJoke + event.data);
@@ -37,12 +22,12 @@ const AIJoke = () => {
 
     return (
         <div>
-            <h1 className='header-title'>AI Joke Response</h1>
+            <h1 className='header-title'>AI chat.completions Response</h1>
             <div className='text-response'>{joke}</div>
         </div>
     );
 };
 
-export default AIJoke;
+export default ChatCompletion;
 
 
