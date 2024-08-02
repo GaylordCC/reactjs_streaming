@@ -1,3 +1,22 @@
+# Requirement in your system to run the React JS project:
+Install nvm
+Install npm
+Install node
+
+
+# How to run the React JS project:
+1. npm install
+2. npm start
+
+
+# Package version:
+node v20.5.1
+nvm  0.39.5
+npm  10.8.0
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
