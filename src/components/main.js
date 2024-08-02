@@ -17,7 +17,7 @@ const AIJoke = () => {
                     throw new Error('Endpoint no válido');
             }
         }
-
+        
         const endpoint = 'azureopenai';
         const eventSource = getEventSource(endpoint);
 
@@ -38,7 +38,7 @@ const AIJoke = () => {
     return (
         <div>
             <h1 className='header-title'>AI Joke Response</h1>
-            <div>{joke}</div>
+            <div className='text-response'>{joke}</div>
         </div>
     );
 };
