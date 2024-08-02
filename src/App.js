@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
-import AIJoke from './components/main';
+import ChatCompletion from './components/main';
+import ChatOpenAI from './components/chatopenai';
+import AzureOpenAI from './components/azureopenai';
 
 function App() {
   return (
     <div className="App">
-        <AIJoke />
+        <ChatCompletion />
+        <ChatOpenAI />
+        <AzureOpenAI />
     </div>
   );
 }
